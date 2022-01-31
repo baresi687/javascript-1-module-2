@@ -101,9 +101,31 @@ const nestedObjects = {
 
 for (const singleObject in nestedObjects) {
   let listItem = document.createElement("li");
-  listItem.innerHTML = `Name ${nestedObjects[singleObject].name}`;
-  listItem.innerHTML = `Type ${nestedObjects[singleObject].type}`;
+  listItem.innerHTML += `
+  Name ${nestedObjects[singleObject].name}
+  Type ${nestedObjects[singleObject].type}`;
   stuffList.append(listItem);
 }
 
 article.append(stuffList);
+
+const array1 = ["Dog", "Cat", "Fish"];
+
+const container = document.querySelector(".container");
+const animals = document.createElement("ul");
+
+array1.forEach((item, index) => {
+  let listItems = document.createElement("li");
+  listItems.append(`${item} ${index + 1}`);
+  animals.append(listItems);
+  container.append(animals);
+});
+
+for (const object2 in nestedObjects) {
+  let listItem = document.createElement("li");
+  listItem.append(`Name: ${nestedObjects[object2].name}`);
+  listItem.append(`Type: ${nestedObjects[object2].type}`);
+  animals.append(listItem);
+  container.append(animals);
+  console.log(nestedObjects[object2].name);
+}

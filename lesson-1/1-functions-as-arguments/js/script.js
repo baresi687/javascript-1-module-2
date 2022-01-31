@@ -39,7 +39,7 @@ function justSomeFunction() {
   console.log("Hello I am a happy function");
 }
 
-logSomeThing(justSomeFunction); // Function
+logSomeThing(justSomeFunction);
 
 const justAHappyFunction = function () {
   console.log("Hello I am a happy function");
