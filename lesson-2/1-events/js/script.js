@@ -82,3 +82,52 @@ const hoverListItem = function () {
 for (const item of allLi) {
   item.addEventListener("mouseover", hoverListItem);
 }
+
+console.dir(theHoverBtn);
+console.log(theHoverBtn.isConnected);
+
+// 7 Switch statement
+
+let animal = "bird";
+
+switch (animal) {
+  case "dog":
+    console.log("Bark!");
+    break;
+  case "cat":
+    console.log("Meow!");
+    break;
+  case "bird":
+    console.log("Tweet!");
+    break;
+  default:
+    console.log("Animal is not found");
+}
+
+// 8 setIntervalid
+
+// String "hreinn 5x"
+
+let count = 0;
+let nameCount = "Hreinn";
+function countFunction() {
+  count++;
+  console.log(count + " " + nameCount);
+  if (count === 5) {
+    clearInterval(interVall);
+  }
+}
+
+const interVall = setInterval(countFunction, 1000);
+
+// 9 setTimeout
+
+const containerDiv = document.querySelector(".container");
+
+function updateDivInner() {
+  containerDiv.innerHTML = "Updated text";
+}
+
+setTimeout(updateDivInner, 2000);
+
+// 10
